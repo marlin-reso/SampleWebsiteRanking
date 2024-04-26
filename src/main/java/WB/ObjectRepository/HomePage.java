@@ -14,6 +14,19 @@ public class HomePage {
 	@FindBy(xpath="//button[@class='logoutbtn']")
 	private WebElement logoutBtn;
 	
+	@FindBy(xpath="//nav[@class='iq-sidebar-menu']")
+	private WebElement navigationBar;
+	
+	@FindBy(xpath="//input[@placeholder='Find Stats of Competitors...']")
+	private WebElement searchBarTxtField;
+	
+	@FindBy(xpath="//footer[@class='bg-white iq-footer mt-4']/div[1][@class='container-fluid']")
+	private WebElement footer;
+	
+	
+	@FindBy(xpath="//a[@href=\"https://staging.websiteranking.ai\"]")
+	private WebElement headerWebsiteRankingLink;
+	
 	public HomePage(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
@@ -27,11 +40,36 @@ public class HomePage {
 		return logoutBtn;
 	}
 	
+	public WebElement getNavigarionBar()
+	{
+		return navigationBar;
+	}
+	
+	public WebElement getSearchBarTxtField() {
+		return searchBarTxtField;
+	}
+
+	public WebElement getFooter() {
+		return footer;
+	}
+
+	public WebElement getHeaderWebsiteRankingLink() {
+		return headerWebsiteRankingLink;
+	}
+
+	
 	public void logoutAction()
 	{
 		muiAvatarBtn.click();
 		logoutBtn.click();
 		
 	}
+	
+	public void clickActionOnheaderWebsiteRankingLink()
+	{
+		headerWebsiteRankingLink.click();
+	}
+	
+	
 
 }

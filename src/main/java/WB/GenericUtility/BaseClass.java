@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -70,7 +71,15 @@ public class BaseClass {
 		
 		String USERNAME = pUtils.readDataFromPropertyFile("username");
 		String PASSWORD = pUtils.readDataFromPropertyFile("password");
-	
+		
+		
+	//	String title = driver.getTitle();
+	//	System.out.println("Title----------------->"+title);
+		
+		PreLoginPage plp = new PreLoginPage(driver);
+		plp.cilickOnLoginBtn();
+		
+		
 		LoginPage lp = new LoginPage(driver);
 		lp.loginToApplication(USERNAME, PASSWORD);	
 		

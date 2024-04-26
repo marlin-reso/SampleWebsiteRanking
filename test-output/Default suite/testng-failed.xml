@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="websiteRanking.moduleTest.RegisterToAccountTest">
+      <class name="practiceSet.VerifyThatTheHomepageLoadsCorrectlyTest">
         <methods>
+          <include name="verifyThatNavigationBarIsDisplayedTest"/>
           <include name="bsConfig"/>
           <include name="bmConfig"/>
           <include name="asConfig"/>
           <include name="bcConfig"/>
-          <include name="registerToAccountTestViaLoginPage"/>
           <include name="amConfig"/>
           <include name="acConfig"/>
         </methods>
-      </class> <!-- websiteRanking.moduleTest.RegisterToAccountTest -->
+      </class> <!-- practiceSet.VerifyThatTheHomepageLoadsCorrectlyTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
