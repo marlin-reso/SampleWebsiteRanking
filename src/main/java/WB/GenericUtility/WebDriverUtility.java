@@ -75,6 +75,29 @@ public class WebDriverUtility {
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
 	
+	
+	/**
+	 * This method will return the boolean value to check that element is clickable or not.
+	 * @param element
+	 * @param driver
+	 * @return
+	 */
+	public boolean waitForElementToBeClickable(WebElement element, WebDriver driver)
+	{
+		try {
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeClickable(element));
+		//if WebDriver doesn't throw an exception, the element is clickable.
+		return true;
+		
+		}catch(Exception e) {
+			//If WebEriverWait throws an exception, the element is not clickable.
+			return false;
+			
+		}
+	}
+	
+	
 	/**
 	 * This method will handle the dropdown based on index.
 	 * @param element

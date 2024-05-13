@@ -24,6 +24,7 @@ public class PreLoginPage extends WebDriverUtility {
 	@FindBy(xpath="//a[@class='btn btn-primary btn-style'  and text()='Get Started']")
 	private WebElement getStartedBtn;
 	
+	
 	public PreLoginPage(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
