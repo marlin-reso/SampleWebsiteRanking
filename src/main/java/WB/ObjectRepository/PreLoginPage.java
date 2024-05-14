@@ -50,7 +50,7 @@ public class PreLoginPage extends WebDriverUtility {
 		return getStartedBtn;
 	}
 	
-	public void cilickOnLoginBtn()
+	public void clickOnLoginBtn()
 	{
 		loginBtn.click();
 	}

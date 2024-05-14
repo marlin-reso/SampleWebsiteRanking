@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="websiteRanking.moduleTest.DashboardPageTest">
+      <class name="websiteRanking.moduleTest.LoginPageTest">
         <methods>
           <include name="bsConfig"/>
           <include name="bmConfig"/>
           <include name="asConfig"/>
           <include name="bcConfig"/>
           <include name="amConfig"/>
-          <include name="verifyThatAvailableLinksAreNotBrokenTest"/>
+          <include name="verifyThatAllTheButtonsAreEnabledTest"/>
           <include name="acConfig"/>
         </methods>
-      </class> <!-- websiteRanking.moduleTest.DashboardPageTest -->
+      </class> <!-- websiteRanking.moduleTest.LoginPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -197,7 +197,6 @@ public class DashboardPageTest extends BaseClass{
 	@Test(priority = 5)
 	public void verifyThatSearchFunctionalityIsPresentOnHomePageTest()
 	{
-		
 		HomePage hp = new HomePage(driver);
 		
 		/*
@@ -234,8 +233,9 @@ public class DashboardPageTest extends BaseClass{
 		HomePage hp = new HomePage(driver);
 		
 		List<WebElement> products = driver.findElements(By.xpath("//*[contains(@class, 'iq-waves-effect')]"));
-	//	System.out.println("products are "+ products);
+		System.out.println("  products are  \n"+ products);
 		//  List<WebElement> products = driver.findElements(By.xpath("//*[contains(@class, 'iq-waves-effect')]"));
+	
 		for(WebElement product : products)
 		{
 			

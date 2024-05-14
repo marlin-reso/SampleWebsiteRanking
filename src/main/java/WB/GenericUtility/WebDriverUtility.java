@@ -29,7 +29,11 @@ public class WebDriverUtility {
 	 */
 	public void maximizeWindow(WebDriver driver)
 	{	
-		driver.manage().window().maximize();	
+		try {
+		driver.manage().window().maximize();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
 	
@@ -39,7 +43,11 @@ public class WebDriverUtility {
 	 */
 	public void minimiseWindow(WebDriver driver)
 	{
+		try {
 		driver.manage().window().minimize();	
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
 	/**
@@ -48,7 +56,12 @@ public class WebDriverUtility {
 	 */
 	public void implicitWait(WebDriver driver)
 	{
+		try{
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));	
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
 	}
 	
 	/**
@@ -59,8 +72,13 @@ public class WebDriverUtility {
 	
 	public void waitForElementToBeVisible(WebDriver driver, WebElement element)
 	{	
+		try {
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOf(element));		
+		wait.until(ExpectedConditions.visibilityOf(element));
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
 	}
 	
 	/**
@@ -71,8 +89,14 @@ public class WebDriverUtility {
 	
 	public void waitForElementToBeClickable(WebDriver driver, WebElement element)
 	{
+		try {
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(element));
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
 	}
 	
 	
@@ -105,8 +129,12 @@ public class WebDriverUtility {
 	 */
 	public void handleDropdown(WebElement element, int index)
 	{
+		try {
 		Select sal = new Select(element);
 		sal.selectByIndex(index);
+		}catch(Exception e)
+		{
+			e.printStackTrace();	}
 	}
 	
 	/**
@@ -116,10 +144,12 @@ public class WebDriverUtility {
 	 */
 	public void handleDropdown(WebElement element, String value)
 	{
-		
+		try {
 		Select sal = new Select(element);
 		sal.selectByValue(value);
-		
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
 	/**
@@ -129,8 +159,13 @@ public class WebDriverUtility {
 	 */
 	public void handleDropdown(String text, WebElement element)
 	{
+		try {
 		Select sal = new Select(element);
 		sal.selectByVisibleText(text);
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
 	}
 	
 	/**
@@ -140,8 +175,13 @@ public class WebDriverUtility {
 	 */
 	public void mouseHoverAction(WebDriver driver, WebElement element)
 	{
+		try {
 		Actions act = new Actions(driver);
 		act.moveToElement(element).perform();
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
 		
 	}
 	
@@ -151,8 +191,13 @@ public class WebDriverUtility {
 	 */
 	public void mouseClickAction(WebDriver driver)
 	{
+		try {
 		Actions act = new Actions(driver);
 		act.click().perform();
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
 	}
 	
 	/**
@@ -162,8 +207,13 @@ public class WebDriverUtility {
 	 */
 	public void mouseClickAction(WebDriver driver, WebElement element)
 	{
+		try {
 		Actions act = new Actions(driver);
 		act.moveToElement(element).click().perform();
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
 	}
 	
 	/**
@@ -172,8 +222,13 @@ public class WebDriverUtility {
 	 */
 	public void rightClickAction(WebDriver driver)
 	{
+		try {
 		Actions act = new Actions(driver);
 		act.contextClick().perform();
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
 	}
 	
 	/**
@@ -183,9 +238,15 @@ public class WebDriverUtility {
 	 */
 	public void rightClickAction(WebDriver driver, WebElement element)
 	{
+		try {
 		Actions act = new Actions(driver);
 		act.contextClick(element).perform();
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
 	}
+		
 	
 	/**
 	 * This method will perform double click action.
@@ -193,10 +254,13 @@ public class WebDriverUtility {
 	 */
 	public void doubleClickAction(WebDriver driver)
 	{
-		
+		try {
 		Actions act = new Actions(driver);
 		act.doubleClick();
-		
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
 	}
 	
 	/**
@@ -206,8 +270,13 @@ public class WebDriverUtility {
 	 */
 	public void doubleClickAction(WebDriver driver, WebElement element)
 	{
+		try {
 		Actions act = new Actions(driver);
 		act.doubleClick(element).perform();
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
 	}
 	
 	/**
@@ -218,10 +287,13 @@ public class WebDriverUtility {
 	 */
 	public void dragAndDropAction(WebDriver driver, WebElement source, WebElement target)
 	{
-		
+		try {
 		Actions act = new Actions(driver);
 		act.dragAndDrop(source, target).perform();
-		
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
 	}
 	
 	/**
@@ -230,7 +302,12 @@ public class WebDriverUtility {
 	 */
 	public void acceptAlert(WebDriver driver)
 	{
+		try {
 		driver.switchTo().alert().accept();
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
 	}
 	
 	/**
@@ -239,7 +316,12 @@ public class WebDriverUtility {
 	 */
 	public void dismissAlert(WebDriver driver)
 	{
+		try {
 		driver.switchTo().alert().dismiss();
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
 	}
 	
 	/**
@@ -249,8 +331,13 @@ public class WebDriverUtility {
 	 */
 	public String getAlertText(WebDriver driver)
 	{
+		
 		return driver.switchTo().alert().getText();
-	}
+		}
+		 	
+		
+		
+	
 	
 	/**
 	 * This method will switch the frame based on index number.
@@ -259,7 +346,11 @@ public class WebDriverUtility {
 	 */
 	public void handleFrame(WebDriver driver, int index)
 	{
+		try {
 		driver.switchTo().frame(index);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
 		
 	}
 	
@@ -270,8 +361,11 @@ public class WebDriverUtility {
 	 */
 	public void handleFrame(WebDriver driver, String nameOrId)
 	{
-		
+		try {
 		driver.switchTo().frame(nameOrId);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
 	/**
@@ -281,7 +375,13 @@ public class WebDriverUtility {
 	 */
 	public void handleFrame(WebDriver driver, WebElement frameElement)
 	{
+		
+		try {
 		driver.switchTo().frame(frameElement);
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
 	}
 	
 	/**
@@ -290,7 +390,12 @@ public class WebDriverUtility {
 	 */
 	public void switchToParentFrame(WebDriver driver)
 	{
+		try {
 		driver.switchTo().parentFrame();
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
 	}
 	
 	/**
@@ -299,7 +404,11 @@ public class WebDriverUtility {
 	 */
 	public void switchToDefaultFrame(WebDriver driver)
 	{
+		try {
 		driver.switchTo().defaultContent();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
 	/**
@@ -309,6 +418,7 @@ public class WebDriverUtility {
 	 */
 	public void switchToWindow(WebDriver driver,String partialWinTitle)
 	{
+		try {
 		//Capture all the window id's
 		Set<String> winId = driver.getWindowHandles();
 		
@@ -324,6 +434,9 @@ public class WebDriverUtility {
 				break;
 			}
 			
+		}
+		}catch(Exception e) {
+			e.printStackTrace();
 		}
 		
 	}
@@ -354,8 +467,12 @@ public class WebDriverUtility {
 	 */
 	public void scrollActions(WebDriver driver)
 	{
+		try {
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("0.500", " ");
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
 		
 	}
 	
@@ -366,9 +483,13 @@ public class WebDriverUtility {
 	 */
 	public void scrollAction(WebDriver driver, WebElement element)
 	{
+		try {
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		int y = element.getLocation().getY();
 		js.executeScript("window.scrollBy(0,"+y+")", element);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
 	}	
 
 }

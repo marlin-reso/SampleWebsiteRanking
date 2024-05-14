@@ -77,7 +77,7 @@ public class BaseClass {
 	//	System.out.println("Title----------------->"+title);
 		
 		PreLoginPage plp = new PreLoginPage(driver);
-		plp.cilickOnLoginBtn();
+		plp.clickOnLoginBtn();
 		
 		
 		LoginPage lp = new LoginPage(driver);
@@ -100,7 +100,7 @@ public class BaseClass {
 	public void acConfig()
 	{
 		driver.quit();
-		System.out.println("Closing the browser succrsfully");
+		System.out.println("Closing the browser succesfully");
 			
 	}
 	
