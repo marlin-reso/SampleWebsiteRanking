@@ -16,7 +16,7 @@ import WB.ObjectRepository.PreLoginPage;
 
 public class PreloginPageTest extends BaseClass {
 	
-	@Test
+	@Test(priority = 1)
 	public void verifyThatPreloginPageIsDisplayedAfterLogoutTest()
 	{
 		try {	
@@ -37,7 +37,7 @@ public class PreloginPageTest extends BaseClass {
 		}
 	}
 	
-	@Test
+	@Test(priority = 2)
 	public void verifyThatAfterClickingOnWebsitesTop100ButtonItWillNaviageToRightPageTest() throws IOException
 	{
 		try {
@@ -47,7 +47,7 @@ public class PreloginPageTest extends BaseClass {
 		plp.clickOnTop100Btn();
 		String actual = driver.getTitle();
 		String expected = "Top 100 Websites Ranking - Most Visited Websites in March 2024 | Websiteranking.ai";
-		//System.out.println("Actual Title "+actual);
+		System.out.println("Actual Title "+actual);
 		Assert.assertEquals(actual, expected, "Website Top 100 page title mismatch");
 		plp.clickOnLoginBtn();
 		String USERNAME = pUtils.readDataFromPropertyFile("username");
@@ -60,7 +60,7 @@ public class PreloginPageTest extends BaseClass {
 		}	
 		
 	}
-	@Test
+	@Test(priority = 3)
 	public void verifyThatAvailableLinksAreNotBrokenOnPreloginPageTest() throws IOException
 	{
 		try {
@@ -105,7 +105,7 @@ public class PreloginPageTest extends BaseClass {
 		}
 	}
 	
-	@Test
+	@Test(priority = 4)
 	public void verifyThatSearchFunctionalityIsEnabledOnPreloginPageTest() throws IOException
 	{
 		try {
@@ -125,7 +125,7 @@ public class PreloginPageTest extends BaseClass {
 			e.printStackTrace();
 		}
 	}
-	@Test
+	@Test (priority = 5)
 	public void verifyThatSearchFunctionalityIsDisplayedOnPreloginPageTest() throws IOException
 	{
 		try {
@@ -144,7 +144,7 @@ public class PreloginPageTest extends BaseClass {
 		}	
 	}
 	
-	@Test
+	@Test (priority = 6)
 	public void verifyThatAfterClickingOnGetStartedButtonItWillNaviageToRightPageTest() throws IOException
 	{
 		try {
@@ -183,7 +183,7 @@ public class PreloginPageTest extends BaseClass {
 			
 		}
 	
-	@Test
+	@Test (priority = 7)
 	public void verifyThatAfterClickingOnBlogLinkItWillNavigateYouToRightPageTest()
 	{
 		try {

@@ -28,7 +28,7 @@ public class ExcelFileUtility {
 	 */
 	public String readDataFromExcelFile(String sheet, int row, int cell) throws EncryptedDocumentException, IOException
 	{
-		
+		try {
 		FileInputStream fis = new FileInputStream(IConstantUtility.excelFilePath);
 		Workbook wb = WorkbookFactory.create(fis);
 		Sheet sh = wb.getSheet(sheet);
@@ -37,6 +37,11 @@ public class ExcelFileUtility {
 		String value = ce.getStringCellValue();
 		wb.close();
 		return value;
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+			return null;
+		}
 			
 	}
 	
@@ -51,7 +56,7 @@ public class ExcelFileUtility {
 	 */
 	public int readDataFromExcelFile(int row, int cell,String sheet ) throws EncryptedDocumentException, IOException
 	{
-		
+		try {
 		FileInputStream fis = new FileInputStream(IConstantUtility.excelFilePath);
 		Workbook wb = WorkbookFactory.create(fis);
 		Sheet sh = wb.getSheet(sheet);
@@ -60,6 +65,11 @@ public class ExcelFileUtility {
 		int value = (int) ce.getNumericCellValue();
 		wb.close();
 		return value;
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+			return 0;
+		}
 			
 	}
 	
@@ -73,13 +83,18 @@ public class ExcelFileUtility {
 	 */
 	public int getRowCount(String sheet) throws EncryptedDocumentException, IOException
 	{
-		
+		try {
 		FileInputStream fis = new FileInputStream(IConstantUtility.excelFilePath);
 		Workbook wb = WorkbookFactory.create(fis);
 		Sheet sh = wb.getSheet(sheet);
 		int rowCount = sh.getLastRowNum();
 		wb.close();
 		return rowCount;
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+			return 0;
+		}
 		
 		
 	}
@@ -96,7 +111,7 @@ public class ExcelFileUtility {
 	 */
 	public void writeDataIntoExcel(String sheet, int row, int cell,String value) throws EncryptedDocumentException, IOException
 	{
-		
+		try {
 		FileInputStream fis = new FileInputStream(IConstantUtility.excelFilePath);
 		Workbook wb = WorkbookFactory.create(fis);
 		 Row rw = wb.getSheet(sheet).getRow(row);
@@ -107,6 +122,10 @@ public class ExcelFileUtility {
 		 wb.write(fos);
 		 System.out.println("---Data Added----");
 		 wb.close();
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
 		
 		
 	}
