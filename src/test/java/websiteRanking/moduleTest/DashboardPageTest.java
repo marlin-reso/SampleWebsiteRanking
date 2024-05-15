@@ -16,13 +16,13 @@ import WB.ObjectRepository.HomePage;
 public class DashboardPageTest extends BaseClass{
 	
 	@Test(priority = 1)
-	public void verifyThatAvailableLinksAreNotBrokenTest()
+	public void verifyThatAvailableLinksAreNotBrokenOnDashboardPageTest()
 	{
 		HttpsUtils httpsUtils = new HttpsUtils();
-		  // Find all the links on the webpage
+		  // Find all the links on the web page
 		
 		List<WebElement> links = driver.findElements(By.tagName("a"));
-		System.out.println("Available links " + links);
+	//	System.out.println("Available links " + links);
 		int responseCode=0;
 		for(WebElement link : links) {
 			String url = link.getAttribute("href");
