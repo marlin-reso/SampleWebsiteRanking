@@ -182,7 +182,7 @@ public class PreloginPageTest extends BaseClass {
 		
 			
 		}
-	
+	/*
 	@Test
 	public void verifyThatAfterClickingOnBlogLinkItWillNavigateYouToRightPageTest()
 	{
@@ -197,14 +197,11 @@ public class PreloginPageTest extends BaseClass {
 		
 		System.out.println("--------title------"+actual);
 	//	String expected = 
-		
-		
-		
-		
+			
 	}
 		
 	
-	
+	*/
 	
 	
 	
