@@ -182,26 +182,36 @@ public class PreloginPageTest extends BaseClass {
 		
 			
 		}
-	/*
+	
 	@Test
 	public void verifyThatAfterClickingOnBlogLinkItWillNavigateYouToRightPageTest()
 	{
-		
+		try {
 		HomePage hp = new HomePage(driver);
 		hp.logoutAction();
-		
 		PreLoginPage plp = new PreLoginPage(driver);
 		plp.clickOnBlogBtn();
-		
 		String actual = driver.getTitle();
+		String expected ="Website Ranking Ai Blog : Elevate Your Website's Performance with AI-Powered Insights - Unlocking Your Website's Potential, One Rank at a Time";
+		//System.out.println("--------title------"+actual);
+		Assert.assertEquals(actual, expected, " Blog page title mismatch ");
+		wUtils.navigateBackwordAction(driver);
+		plp.clickOnLoginBtn();
+		String USERNAME = pUtils.readDataFromPropertyFile("username");
+		String PASSWORD = pUtils.readDataFromPropertyFile("password");
+		LoginPage lp = new LoginPage(driver);
+		lp.loginToApplication(USERNAME, PASSWORD);
 		
-		System.out.println("--------title------"+actual);
-	//	String expected = 
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+			
+		
 			
 	}
 		
 	
-	*/
+	
 	
 	
 	
