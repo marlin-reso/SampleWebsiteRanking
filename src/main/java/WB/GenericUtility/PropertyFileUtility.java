@@ -18,12 +18,17 @@ public class PropertyFileUtility {
 	 */
 	public String readDataFromPropertyFile(String key) throws IOException
 	{
-		
+		try {
 		FileInputStream fisp = new FileInputStream(IConstantUtility.propertyFilePath);
 		Properties prop = new Properties();
 		prop.load(fisp);
 		String value = prop.getProperty(key);
 		return value;
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+			return null;
+		}
 		
 		
 		
