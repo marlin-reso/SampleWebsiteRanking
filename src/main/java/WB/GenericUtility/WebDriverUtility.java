@@ -22,6 +22,48 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  */
 public class WebDriverUtility {
 	
+	/**
+	 * @author sanjayGiri
+	 * @param driver
+	 */
+	public void navigateForwordAction(WebDriver driver)
+	{
+		try {
+		driver.navigate().forward();
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * @author sanjayGiri
+	 * @param driver
+	 */
+	public void navigateBackwordAction(WebDriver driver)
+	{
+		try {
+		driver.navigate().back();
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	
+	/**
+	 * @author sanjayGiri
+	 * @param driver
+	 */
+	public void refreshAction(WebDriver driver)
+	{
+		try {
+		driver.navigate().refresh();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
 	
 	/**
 	 * This method will maximise the window.
