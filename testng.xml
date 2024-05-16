@@ -3,6 +3,12 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
+      <class name="websiteRanking.moduleTest.PreloginPage_02Test"/>
+      
+      <class name="websiteRanking.moduleTest.PreloginPageTest"/>
+     
+     
+      <class name="websiteRanking.moduleTest.RegisterToAccountTest"/>
       <class name="websiteRanking.moduleTest.DashboardPageTest"/>
       <class name="websiteRanking.moduleTest.LoginPageTest"/>
     </classes>
