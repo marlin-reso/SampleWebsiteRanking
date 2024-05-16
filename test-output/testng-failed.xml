@@ -1,19 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="websiteRanking.moduleTest.DashboardPageTest">
+      <class name="websiteRanking.moduleTest.LoginPageTest">
         <methods>
           <include name="bsConfig"/>
           <include name="bmConfig"/>
           <include name="asConfig"/>
           <include name="bcConfig"/>
+          <include name="amConfig"/>
+          <include name="verifyThatAllTheButtonsAreEnabledTest"/>
+          <include name="acConfig"/>
+        </methods>
+      </class> <!-- websiteRanking.moduleTest.LoginPageTest -->
+      <class name="websiteRanking.moduleTest.RegisterToAccountTest">
+        <methods>
+          <include name="bsConfig"/>
+          <include name="bmConfig"/>
+          <include name="asConfig"/>
+          <include name="bcConfig"/>
+          <include name="amConfig"/>
+          <include name="registerToAccountTestViaLoginPageTest"/>
+          <include name="acConfig"/>
+        </methods>
+      </class> <!-- websiteRanking.moduleTest.RegisterToAccountTest -->
+      <class name="websiteRanking.moduleTest.PreloginPageTest">
+        <methods>
+          <include name="verifyThatAvailableLinksAreNotBrokenOnPreloginPageTest"/>
+          <include name="bsConfig"/>
+          <include name="bmConfig"/>
+          <include name="asConfig"/>
+          <include name="verifyThatSearchFunctionalityIsEnabledOnPreloginPageTest"/>
+          <include name="bcConfig"/>
+          <include name="amConfig"/>
+          <include name="verifyThatAfterClickingOnWebsitesTop100ButtonItWillNaviageToRightPageTest"/>
+          <include name="acConfig"/>
+        </methods>
+      </class> <!-- websiteRanking.moduleTest.PreloginPageTest -->
+      <class name="websiteRanking.moduleTest.DashboardPageTest">
+        <methods>
+          <include name="verifyThatUserNameIsDisplayedOnHomepageTest"/>
+          <include name="bsConfig"/>
+          <include name="bmConfig"/>
+          <include name="asConfig"/>
+          <include name="verifyThatProductsDisplayedOnHomePageAreClickable"/>
+          <include name="verifyThatSearchFunctionalityIsPresentOnHomePageTest"/>
+          <include name="bcConfig"/>
           <include name="verifyThatAvailableLinksAreNotBrokenOnDashboardPageTest"/>
           <include name="amConfig"/>
+          <include name="verifyThatFeaturedFunctionArePresentOnHomePageTest"/>
           <include name="acConfig"/>
         </methods>
       </class> <!-- websiteRanking.moduleTest.DashboardPageTest -->
+      <class name="websiteRanking.moduleTest.PreloginPage_02Test">
+        <methods>
+          <include name="bsConfig"/>
+          <include name="bmConfig"/>
+          <include name="asConfig"/>
+          <include name="bcConfig"/>
+          <include name="amConfig"/>
+          <include name="verifyThatAfterClickingOnWhyusLinkItWillNavigateYouToRightPage"/>
+          <include name="acConfig"/>
+        </methods>
+      </class> <!-- websiteRanking.moduleTest.PreloginPage_02Test -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

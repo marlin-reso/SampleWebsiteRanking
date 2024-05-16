@@ -14,17 +14,56 @@
           <include name="acConfig"/>
         </methods>
       </class> <!-- websiteRanking.moduleTest.LoginPageTest -->
-      <class name="websiteRanking.moduleTest.DashboardPageTest">
+      <class name="websiteRanking.moduleTest.RegisterToAccountTest">
         <methods>
           <include name="bsConfig"/>
           <include name="bmConfig"/>
           <include name="asConfig"/>
           <include name="bcConfig"/>
           <include name="amConfig"/>
-          <include name="verifyThatAvailableLinksAreNotBrokenTest"/>
+          <include name="registerToAccountTestViaLoginPageTest"/>
+          <include name="acConfig"/>
+        </methods>
+      </class> <!-- websiteRanking.moduleTest.RegisterToAccountTest -->
+      <class name="websiteRanking.moduleTest.PreloginPageTest">
+        <methods>
+          <include name="verifyThatAvailableLinksAreNotBrokenOnPreloginPageTest"/>
+          <include name="bsConfig"/>
+          <include name="bmConfig"/>
+          <include name="asConfig"/>
+          <include name="verifyThatSearchFunctionalityIsEnabledOnPreloginPageTest"/>
+          <include name="bcConfig"/>
+          <include name="amConfig"/>
+          <include name="verifyThatAfterClickingOnWebsitesTop100ButtonItWillNaviageToRightPageTest"/>
+          <include name="acConfig"/>
+        </methods>
+      </class> <!-- websiteRanking.moduleTest.PreloginPageTest -->
+      <class name="websiteRanking.moduleTest.DashboardPageTest">
+        <methods>
+          <include name="verifyThatUserNameIsDisplayedOnHomepageTest"/>
+          <include name="bsConfig"/>
+          <include name="bmConfig"/>
+          <include name="asConfig"/>
+          <include name="verifyThatProductsDisplayedOnHomePageAreClickable"/>
+          <include name="verifyThatSearchFunctionalityIsPresentOnHomePageTest"/>
+          <include name="bcConfig"/>
+          <include name="verifyThatAvailableLinksAreNotBrokenOnDashboardPageTest"/>
+          <include name="amConfig"/>
+          <include name="verifyThatFeaturedFunctionArePresentOnHomePageTest"/>
           <include name="acConfig"/>
         </methods>
       </class> <!-- websiteRanking.moduleTest.DashboardPageTest -->
+      <class name="websiteRanking.moduleTest.PreloginPage_02Test">
+        <methods>
+          <include name="bsConfig"/>
+          <include name="bmConfig"/>
+          <include name="asConfig"/>
+          <include name="bcConfig"/>
+          <include name="amConfig"/>
+          <include name="verifyThatAfterClickingOnWhyusLinkItWillNavigateYouToRightPage"/>
+          <include name="acConfig"/>
+        </methods>
+      </class> <!-- websiteRanking.moduleTest.PreloginPage_02Test -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

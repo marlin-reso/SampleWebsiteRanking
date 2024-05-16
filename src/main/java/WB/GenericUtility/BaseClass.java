@@ -99,7 +99,11 @@ public class BaseClass {
 	@AfterClass
 	public void acConfig()
 	{
-		driver.quit();
+		if (driver != null) {
+            driver.quit();
+        }
+		
+		//driver.quit();
 		System.out.println("Closing the browser succesfully");
 			
 	}
