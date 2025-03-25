@@ -118,7 +118,7 @@ public class LoginPageTest extends BaseClass{
 			
 		String USERNAME = pUtils.readDataFromPropertyFile("username");
 		String PASSWORD = pUtils.readDataFromPropertyFile("password");
-	
+	system.out.println(PASSWORD);
 		lp.loginToApplication(USERNAME, PASSWORD);
 	}
 	
